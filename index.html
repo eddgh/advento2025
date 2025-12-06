@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Músicas do Advento 2025</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Dashboard à esquerda */
+    #dashboard {
+      width: 250px;
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    #dashboard h2 {
+      margin-top: 0;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    #dashboard ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #dashboard li {
+      margin: 10px 0;
+    }
+
+    #dashboard a {
+      color: #00aced;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    #dashboard a:hover {
+      text-decoration: underline;
+    }
+
+    /* Área do vídeo à direita */
+    #video-area {
+      flex: 1;
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    iframe {
+      width: 90%;
+      height: 90%;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Dashboard à esquerda -->
+  <div id="dashboard">
+    <h2>
+      <img src="./assets/favicon.png" alt="icone Advento" width="70" />&nbsp;Advento 2025
+    </h2>
+    <ul>
+      <li>
+        <a onclick="loadVideo('MdqngWtH7cU')">COROA DO ADVENTO (1º DOMINGO)</a>
+      </li>
+      <li>
+        <a onclick="loadVideo('0Nsw1i-d02M')">COROA DO ADVENTO (2º DOMINGO)</a>
+      </li>
+      <li>
+        <a onclick="loadVideo('EQzVnTbdbY4')">COROA DO ADVENTO (4º DOMINGO)</a>
+      </li>
+      <li>
+        <ul>
+          <p>Entrada</p>
+      <li>
+        <a onclick="loadVideo('-0RcfSrwLOY')">Vigia Esperando a Aurora</a>
+      </li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <p>Ofertórios</p>
+          <li>
+            <a onclick="loadVideo('9omXZ_SbvJw')">teu povo, senhor</a>
+          </li>
+          <li>
+            <a onclick="loadVideo('GLNAouvmGuI')">nasceu em belém</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <p>Comunhão</p>
+          <li>
+            <a onclick="loadVideo('4yiF23TsubE')">as colinas vão ser abaixadas</a>
+            <a href="https://www.youtube.com/watch?v=SSySFmM3bSU" target="_blank" title="Paulinas COMEP proíbe a intgração do vídeo">oficial (abrir no YouTube)</a>
+
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <p>Graça</p>
+          <li>
+            <a onclick="loadVideo('tcD5eN9FePo')">preparai o caminho</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <p>Final</p>
+          <li>
+            <a onclick="loadVideo('iH6UvrF4NPM')">Peregrinos da Esperança</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Área do vídeo à direita -->
+  <div id="video-area">
+    <p>Selecione um vídeo no dashboard ⬅️</p>
+  </div>
+
+  <script>
+    function loadVideo(videoId) {
+      document.getElementById(
+        "video-area"
+      ).innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+    }
+  </script>
+</body>
+
+</html>
